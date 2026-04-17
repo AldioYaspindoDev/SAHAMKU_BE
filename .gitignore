@@ -1,0 +1,19 @@
+# Virtual Environments
+venv/
+.venv/
+.venv-*/
+
+# Environment variables
+.env
+
+# Python junk
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Project specific
+/datasets/
+/scratch/
+.vscode/
