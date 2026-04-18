@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from config.database import engine, Base
 from models import user_model
 from api.endpoint import all_routers
+import logging
 
 # Buat semua tabel di database secara otomatis saat server start
 Base.metadata.create_all(bind=engine)
@@ -21,6 +22,14 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"], # Izinkan semua method (GET, POST, OPTIONS, dll)
     allow_headers=["*"], # Izinkan semua header
+)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler()
+    ]
 )
 
 
