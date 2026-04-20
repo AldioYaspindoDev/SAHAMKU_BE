@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 import schemas.saham_schemas as schema
-import controllers.saham_controller as controller
+import controllers.saham_nvda_controller as controller
 
 router = APIRouter(prefix="/predict", tags=["prediction"])
 

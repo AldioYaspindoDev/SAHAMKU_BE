@@ -1,8 +1,6 @@
 import joblib
 import pandas as pd
 import schemas.saham_schemas as saham 
-import yfinance as yf
-import numpy as np
 
 model_simple = joblib.load("datasets/model_xgb_prodcution.pkl")
 
