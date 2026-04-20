@@ -42,4 +42,6 @@ def get_economic_news(db: Session):
         return db.query(news.News).all()
     return []
 
+def get_news_by_id(db: Session, id: int):
+    return db.query(news.News).filter(news.News.id == id).first()
 
