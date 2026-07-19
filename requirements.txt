@@ -1,0 +1,27 @@
+# --- Core web framework & server ---
+fastapi
+uvicorn[standard]
+python-multipart          # wajib untuk endpoint upload file (UploadFile/File)
+
+# --- Database ---
+sqlalchemy
+psycopg2-binary
+python-dotenv
+
+# --- Validasi & schema ---
+pydantic[email]
+
+# --- Autentikasi ---
+python-jose[cryptography]  # JWT token (core/token.py)
+passlib[bcrypt]             # hashing password (controllers/user_controller.py)
+
+# --- Fitur prediksi saham (sudah ada sebelumnya) ---
+joblib
+xgboost
+requests
+yfinance
+
+# --- Fitur Index Analytics (LQ45, dst — baru ditambahkan) ---
+pandas
+numpy
+openpyxl
