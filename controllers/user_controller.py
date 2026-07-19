@@ -53,7 +53,7 @@ def login_user(db: Session, user: user_schemas.UserLogin):
     if not pwd_argon2.verify(user.hashed_password, db_user.hashed_password):
         raise HTTPException(status_code=401, detail="Password salah")
     access_token = create_token(data={"sub": db_user.username})
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {"access_token": access_token, "token_tykope": "bearer"}
 
 def update_user(db: Session, user_id: int, user_update: user_schemas.UserUpdate):
     db_user = db.query(user_model.User).filter(user_model.User.id == user_id).first()
